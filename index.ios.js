@@ -14,6 +14,8 @@ import {
   StatusBar,
 } from 'react-native';
 
+import TabNavigator from 'react-native-tab-navigator';
+
 import BookList from './iOS_views/book/book_list';
 import Navigation from './iOS_views/common/navigation';
 //隐藏状态栏
@@ -29,26 +31,26 @@ class DoubanProject extends Component {
 
   render(){
     return(
-      <TabBarIOS>
-        <TabBarIOS.Item
+      <TabNavigator>
+        <TabNavigator.Item
           title = '图书'
           selected = {this.state.selectedTab === '图书'}
           onPress={()=>{
-          this.setState({
-            selectedTab: '图书'
-          })}}>
+            this.setState({
+              selectedTab: '图书'
+            })}}>
           <Navigation component={BookList}/>
-        </TabBarIOS.Item>
-        <TabBarIOS.Item
+        </TabNavigator.Item>
+        <TabNavigator.Item
           title = '电影'
           selected = {this.state.selectedTab === '电影'}
           onPress={()=>{
-          this.setState({
-            selectedTab: '电影'
-          })}}>
+            this.setState({
+              selectedTab: '电影'
+            })}}>
           <View style={{flex : 1, backgroundColor : 'cyan'}}></View>
-        </TabBarIOS.Item>
-      </TabBarIOS>
+        </TabNavigator.Item>
+      </TabNavigator>
     );
   };
 }
