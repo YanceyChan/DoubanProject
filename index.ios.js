@@ -10,7 +10,6 @@ import {
   StyleSheet,
   Text,
   View,
-  TabBarIOS,
   StatusBar,
 } from 'react-native';
 

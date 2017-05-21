@@ -14,8 +14,10 @@ import {
   StyleSheet,
   View,
   Text,
-  NavigatorIOS,
+  // NavigatorIOS,
 } from 'react-native';
+
+import { Navigator } from 'react-native-deprecated-custom-components'
 
 export default class Navigation extends Component {
   render(){
@@ -25,7 +27,7 @@ export default class Navigation extends Component {
       title: '',
     }
     return(
-      <NavigatorIOS
+      <Navigator
         style={{flex: 1}}
         initialRoute={rootRoute}
         navigationBarHidden = {true}
