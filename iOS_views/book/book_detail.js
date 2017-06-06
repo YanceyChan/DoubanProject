@@ -56,7 +56,7 @@ export default class BookDetail extends Component {
 
   render() {
     return (
-      <ScrollView>
+      <ScrollView style={styles.container}>
         {
           this.state.bookData?
           <View>
