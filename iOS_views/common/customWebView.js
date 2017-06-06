@@ -10,18 +10,15 @@
 
 import React, {Component} from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
   View,
-  Text,
   WebView,
 } from 'react-native';
 
 import Header from './header'
 
 export default class CustomWebView extends Component{
-  constructor() {
-
+  constructor(props) {
+    super(props)
   }
 
   render(){

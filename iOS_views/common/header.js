@@ -10,11 +10,9 @@
 
 import React, {Component} from 'react';
 import {
-  AppRegistry,
   StyleSheet,
   View,
   Text,
-  TextInput,
   TouchableOpacity
 } from 'react-native';
 
@@ -24,7 +22,7 @@ export default class Header extends Component {
   render(){
 
     // 获取obj对象，包括：backName、barTitle
-    var headerContent = this.props.initObj;
+    let headerContent = this.props.initObj;
 
     return(
       <View style={styles.header}>

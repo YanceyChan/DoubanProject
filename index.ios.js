@@ -18,11 +18,12 @@ import TabNavigator from 'react-native-tab-navigator';
 import BookList from './iOS_views/book/book_list';
 import Navigation from './iOS_views/common/navigation';
 //隐藏状态栏
-StatusBar.setHidden(true);
+
 
 class DoubanProject extends Component {
   constructor(props) {
     super(props);
+    StatusBar.setHidden(true)
     this.state = {
       selectedTab : "图书",
     }

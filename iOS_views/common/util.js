@@ -9,15 +9,11 @@
 
 import React, {Component} from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
   Dimensions, //用于获取设备屏幕的宽高
   ActivityIndicator
 } from 'react-native';
 
-var Util = {
+export default {
   windowSize : {
     width : Dimensions.get('window').width,
     height: Dimensions.get('window').height,
@@ -32,5 +28,3 @@ var Util = {
 
   loading: <ActivityIndicator style ={{margin: 200}}/>,
 }
-
-module.exports = Util;

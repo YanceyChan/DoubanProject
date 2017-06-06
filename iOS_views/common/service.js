@@ -7,7 +7,7 @@ var BaseURL = "https://api.douban.com/v2/";
 // var book_search = BaseURL + "book/search";
 // var book_detail_id = BaseURL + 'book/';
 // var movie_search = BaseURL + 'movie/search';
-var ServiceURL = {
+export default {
   /*
     图书搜索
     image 图书缩略图
@@ -32,5 +32,3 @@ var ServiceURL = {
   */
   movie_search : BaseURL + 'movie/search',
 }
-
-module.exports = ServiceURL;

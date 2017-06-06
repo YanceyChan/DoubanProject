@@ -21,15 +21,13 @@
 
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   View,
   Text,
   StyleSheet,
-  Image,
   ScrollView,
 } from 'react-native';
 
-import ServiceURL from './../common/service';
+import service from './../common/service';
 import Util from './../common/util';
 import Header from './../common/header';
 import BookItem from './book_item';
@@ -44,8 +42,8 @@ export default class BookDetail extends Component {
 
   getData() {
 
-    var that = this;
-    var url = ServiceURL.book_detail_id + this.props.bookID;
+    // var that = this;
+    let url = service.book_detail_id + this.props.bookID;
     Util.getRequest(url, (data)=>{
 
       this.setState({
@@ -74,7 +72,7 @@ export default class BookDetail extends Component {
               <Text style={styles.title}>作者简介</Text>
               <Text style={styles.title}>{this.state.bookData.author_intro}</Text>
             </View>
-            <View style={{height: 55}}></View>
+            <View style={{height: 55}} />
           </View>
           : Util.loading
         }

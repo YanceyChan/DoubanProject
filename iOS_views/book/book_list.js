@@ -6,19 +6,14 @@
 
 import React, {Component} from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
   View,
-  Text,
-  Image,
-  TouchableOpacity,
   ListView,
   ScrollView,
 } from 'react-native';
 
 import Util from './../common/util';
 import SearchBar from './../common/searchBar';
-import ServiceURL from './../common/service';
+import service from './../common/service';
 import BookItem from './book_item';
 import BookDetail from './book_detail';
 
@@ -47,7 +42,7 @@ export default class BookList extends Component {
 
     //请求数据
     var that = this;
-    var url = ServiceURL.book_search + '?count=20&q=' + this.state.keywords;
+    var url = service.book_search + '?count=20&q=' + this.state.keywords;
     Util.getRequest(url, (data)=>{
       //请求成功毁掉函数
       /*

@@ -10,30 +10,27 @@
 
 import React, {Component} from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  View,
-  Text,
-  // NavigatorIOS,
+  View
 } from 'react-native';
 
 import { Navigator } from 'react-native-deprecated-custom-components'
 
 export default class Navigation extends Component {
   render(){
-    var rootRoute = {
+    let rootRoute = {
       component: this.props.component,
       passProps: {},
       title: '',
     }
+
     return(
       <Navigator
         style={{flex: 1}}
         initialRoute={rootRoute}
         navigationBarHidden = {true}
-        configureScene={(route)=>{return Navigator.SceneConfigs.PushFromRight}}
+        configureScene={()=>{return Navigator.SceneConfigs.PushFromRight}}
         renderScene={(route, navigator  ) => {
-          var Component = route.component;
+          let Component = route.component;
           return(
             <View style={{flex: 1}}>
               <Component
